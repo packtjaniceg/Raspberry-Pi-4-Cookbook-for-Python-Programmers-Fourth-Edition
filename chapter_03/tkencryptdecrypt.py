@@ -32,8 +32,8 @@ key_enter = TK.Entry(root, textvariable=keyvalue, width=8)
 #Set layout
 label1.grid(row=0, columnspan=2, sticky=TK.E+TK.W)
 text_enter.grid(row=1, columnspan=2, sticky=TK.E+TK.W)
-encrypt_button.grid(row=2, column=0, sticky=TK.E)
-decrypt_button.grid(row=2, column=1, sticky=TK.W)
+encrypt_btn.grid(row=2, column=0, sticky=TK.E)
+decrypt_btn.grid(row=2, column=1, sticky=TK.W)
 label2.grid(row=3, column=0, sticky=TK.E)
 key_enter.grid(row=3, column=1, sticky=TK.W)
 

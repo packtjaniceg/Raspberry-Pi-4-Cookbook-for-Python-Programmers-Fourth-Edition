@@ -45,7 +45,6 @@ class Photo:
             print("Image has no Exif Tags")
             self.exifvalid = False
 
-
     def init_dates(self):
         '''determines the date the photo was taken'''
         #Gather all the times available into YYYY-MM-DD format

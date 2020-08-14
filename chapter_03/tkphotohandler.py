@@ -85,9 +85,9 @@ def main():
         view_photo = PH.Photo(sys.argv[ARG_IMAGEFILE])
         #Test the module by running a GUI
         if view_photo.filevalid:
-            PhotoGui(view_photo)
+            PhotoGui(sys.argv[ARG_IMAGEFILE])
     else:
-        print("Usage: photohandler.py imagefile")
+        print("Usage: tkphotohandler.py imagefile")
         PhotoGui()
 
 if __name__ == '__main__':

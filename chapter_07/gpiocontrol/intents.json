@@ -1,0 +1,13 @@
+{   
+"intents": [{
+        "intent": "LocationControlIntent",
+        "slots": [{
+            "name": "status",
+            "type": "GPIO_CONTROL"
+        },
+                  {
+            "name": "location",
+            "type": "LOCATION"
+        }]
+    }]
+}

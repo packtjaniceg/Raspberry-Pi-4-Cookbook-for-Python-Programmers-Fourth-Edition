@@ -1,0 +1,101 @@
+{ "interactionModel": { "languageModel": { "invocationName": "all knowing", 
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": { "level": "LOW"
+                }
+            },
+            "intents": [ { "name": "AMAZON.CancelIntent", "samples": []
+                },
+                { "name": "AMAZON.HelpIntent", "samples": []
+                },
+                { "name": "AMAZON.StopIntent", "samples": []
+                },
+                { "name": "HelloWorldIntent", "slots": [], "samples": [ "hello", "how 
+                        are you", "say hi world", "say hi", "hi", "say hello world", 
+                        "say hello"
+                    ]
+                },
+                { "name": "AMAZON.NavigateHomeIntent", "samples": []
+                },
+                { "name": "AMAZON.FallbackIntent", "samples": []
+                },
+                { "name": "CapturePersonIntent", "slots": [ { "name": "name", "type": 
+                            "name_type", "samples": [
+                                "{name}", "I would like to know about {name}" ]
+                        }
+                    ], "samples": [ "Tell me about {name}", "I'm interested in {name}", 
+                        "{name}"
+                    ]
+                },
+                { "name": "CaptureQuestionIntent", "slots": [ { "name": "question", 
+                            "type": "AMAZON.SearchQuery", "samples": [
+                                "What do they {question}", "What is their {question}", 
+                                "Where do they {question}", "How do they {question}", "I 
+                                would like to know their {question}", "{question}"
+                            ]
+                        }
+                    ], "samples": [ "How {question}", "Who {question}", "Where 
+                        {question}", "Why {question}", "What {question}"
+                    ]
+                }
+            ], "types": [ { "name": "name_type", "values": [ { "id": "James", "name": { 
+                                "value": "James", "synonyms": [
+                                    "Jimmy", "Jimbo", "Jim" ]
+                            }
+                        },
+                        { "name": { "value": "Richard"
+                            }
+                        },
+                        { "name": { "value": "Helen", "synonyms": [ "Nelly" ]
+                            }
+                        },
+                        { "name": { "value": "Kirsty"
+                            }
+                        },
+                        { "name": { "value": "Tom", "synonyms": [ "Thomas" ]
+                            }
+                        },
+                        { "name": { "value": "Tim", "synonyms": [ "Daddy", "Dad" ]
+                            }
+                        },
+                        { "name": { "value": "Harry"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": { "intents": [ { "name": "CapturePersonIntent", 
+                    "confirmationRequired": false, "prompts": {}, "slots": [
+                        { "name": "name", "type": "name_type", "confirmationRequired": 
+                            false, "elicitationRequired": true, "prompts": {
+                                "elicitation": "Elicit.Slot.63758318781.1246494806591"
+                            }
+                        }
+                    ]
+                },
+                { "name": "CaptureQuestionIntent", "confirmationRequired": false, 
+                    "prompts": {}, "slots": [
+                        { "name": "question", "type": "AMAZON.SearchQuery", 
+                            "confirmationRequired": false, "elicitationRequired": true, 
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1209643449052.198493176993"
+                            }
+                        }
+                    ]
+                }
+            ], "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [ { "id": "Elicit.Slot.63758318781.1246494806591", "variations": [ { 
+                        "type": "PlainText", "value": "Who would you like to know 
+                        about?"
+                    }
+                ]
+            },
+            { "id": "Elicit.Slot.1209643449052.198493176993", "variations": [ { "type": 
+                        "PlainText", "value": "What would you like to know?"
+                    }
+                ]
+            }
+        ]
+    }
+}

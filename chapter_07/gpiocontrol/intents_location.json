@@ -1,0 +1,56 @@
+{ "interactionModel": { "languageModel": { "invocationName": "gpio pi", "intents": [ { 
+                    "name": "GPIOControlIntent", "slots": [
+                        { "name": "status", "type": "GPIO_CONTROL"
+                        },
+                        { "name": "pin", "type": "AMAZON.NUMBER"
+                        }
+                    ], "samples": [ "to turn pin {pin} {status}" ]
+                },
+                { "name": "LocationControlIntent", "slots": [ { "name": "status", 
+                            "type": "GPIO_CONTROL"
+                        },
+                        { "name": "location", "type": "LOCATION"
+                        }
+                    ], "samples": [ "to turn {location} {status}", "to change the 
+                        {location} to {status}"
+                    ]
+                },
+                { "name": "AMAZON.StopIntent", "samples": []
+                },
+                { "name": "AMAZON.NavigateHomeIntent", "samples": []
+                },
+                { "name": "StartPiTimerIntent", "slots": [ { "name": "period", "type": 
+                            "AMAZON.DURATION"
+                        }
+                    ], "samples": [ "to time {period}" ]
+                },
+                { "name": "AMAZON.CancelIntent", "samples": []
+                },
+                { "name": "AMAZON.HelpIntent", "samples": []
+                }
+            ], "types": [ { "name": "GPIO_CONTROL", "values": [ { "name": { "value": 
+                                "on"
+                            }
+                        },
+                        { "name": { "value": "off"
+                            }
+                        }
+                    ]
+                },
+                { "name": "LOCATION", "values": [ { "name": { "value": "red", 
+                                "synonyms": [
+                                    "stop" ]
+                            }
+                        },
+                        { "name": { "value": "orange", "synonyms": [ "yellow", "amber" ]
+                            }
+                        },
+                        { "name": { "value": "green", "synonyms": [ "go" ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
